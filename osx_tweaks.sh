@@ -18,6 +18,9 @@ defaults write -g NSInitialToolTipDelay -int 100
 # Silent reboot (removes the reboot chime sound)
 # sudo nvram SystemAudioVolume=%80
 
+# Don't write .DS_Store files on network drives
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
 # Enable screen saver on logon screen
 sudo defaults write /Library/Preferences/com.apple.screensaver loginWindowIdleTime 300
 sudo defaults write /Library/Preferences/com.apple.screensaver loginWindowModulePath "/System/Library/Screen Savers/Arabesque.qtz"
